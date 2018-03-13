@@ -1,6 +1,0 @@
-framework module RidazSwiftyFramework {
-  umbrella header "RidazSwiftyFramework-umbrella.h"
-
-  export *
-  module * { export * }
-}

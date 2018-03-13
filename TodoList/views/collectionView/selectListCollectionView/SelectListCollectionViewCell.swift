@@ -37,7 +37,7 @@ class SelectListCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI() {
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.2) {
             if self.isSelect {
                 self.titleLabel.textColor = UIColor.white
                 self.roundedBackgroundView.backgroundColor = self.list?.color
