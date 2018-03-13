@@ -33,7 +33,7 @@ class SelectListCollectionViewCell: UICollectionViewCell {
         
         roundedBackgroundView.layer.cornerRadius = 15
         roundedBackgroundView.layer.borderWidth = 1
-        roundedBackgroundView.layer.borderColor = UIColor(hex: "95a5a6").cgColor
+        roundedBackgroundView.layer.borderColor = UIColor(hex: "#bdc3c7").cgColor
     }
     
     func updateUI() {
