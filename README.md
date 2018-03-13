@@ -4,9 +4,9 @@ Realm / Swift 4 / Todo List
 ## Presentation
 
 ### All tasks
-<center>
+<p align="center"> 
 <img src="https://github.com/RidazFluent/Swifty-Todo-List/blob/master/Screenshots/IMG_1058.PNG" width="250" height="444">
-</center>
+</p>
 ### Create a task
 
 <img src="https://github.com/RidazFluent/Swifty-Todo-List/blob/master/Screenshots/IMG_1056.PNG" width="250" height="444">
