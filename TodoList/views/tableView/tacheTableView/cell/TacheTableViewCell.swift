@@ -21,6 +21,7 @@ class TacheTableViewCell: CustomTableViewCell {
         didSet {
             titleLabel.text = taskModel?.titleLabel
             dateLabel.text = taskModel?.dateLabel
+            roundedBackgroundView.backgroundColor = taskModel?.backgroundColor
         }
     }
     

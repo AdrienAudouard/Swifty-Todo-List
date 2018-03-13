@@ -12,11 +12,15 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
     var lists: [List] = [List]() {
         didSet {
             selectedCell = [Bool](repeating: false, count: lists.count)
+            selectedList.removeAll()
             self.reloadData()
         }
     }
     
     var selectedCell: [Bool] = [Bool]()
+    var selectedList: [List] = [List]()
+    
+    weak var listDelegate: FilterListDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +50,14 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! SelectListCollectionViewCell
+        if cell.isSelect {
+            selectedList.remove(at: selectedList.index(of: lists[indexPath.row])!)
+            listDelegate?.removeFilter(list: lists[indexPath.row])
+        } else {
+            selectedList.append(lists[indexPath.row])
+            listDelegate?.addFilter(list: lists[indexPath.row])
+        }
+        
         cell.isSelect = !cell.isSelect
         
         selectedCell[indexPath.row] = cell.isSelect

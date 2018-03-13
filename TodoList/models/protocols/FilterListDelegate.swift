@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol FilterListDelegate: class {
+    func addFilter(list: List)
+    func removeFilter(list: List)
+}

@@ -16,6 +16,15 @@ import UserNotifications
 class ViewController: UIViewController {
     
     var bulletinManager: BulletinManager?
+    var sections: [Section]! {
+        didSet {
+            UIView.transition(with: taskTableView, duration: 0.2,options: .transitionCrossDissolve, animations: {
+                self.taskTableView.sections = self.sections
+                
+            })
+        }
+    }
+    
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var taskTableView: TacheTableView!
     @IBOutlet weak var selectListCollectionView: SelectListCollectionView!
@@ -27,7 +36,9 @@ class ViewController: UIViewController {
         chooseThemePopUp.delegate = self
         //view.addSubview(chooseThemePopUp)
         
+        selectListCollectionView.listDelegate = self
         taskTableView.taskDelegate = self
+        sections = [Section]()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,9 +114,23 @@ extension ViewController: TaskProtocol {
     }
 }
 
+extension ViewController: FilterListDelegate {
+    func addFilter(list: List) {
+        sections = Section.merge(s1: sections, s2: Section.createSectionWith(filter: list))
+    }
+    
+    func removeFilter(list: List) {
+        sections = Section.remove(filter: list, sections: sections)
+    }
+    
+    
+}
+
 extension ViewController: ThemeChangeProtocol {
     func themeDidChange(theme newTheme: Theme) {
         AppPreferences.sharedInstance.theme = newTheme
         //applyTheme()
     }
 }
+
+

@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class TaskCellModel {
     var titleLabel: String
     var dateLabel: String
+    var backgroundColor: UIColor
+    
     var task: Task
+    
     init(_ task: Task) {
         self.task = task
         let formatter = DateFormatter()
@@ -22,5 +26,7 @@ class TaskCellModel {
         formatter.dateFormat = "HH:mm"
         
         dateLabel = "\(formatter.string(from: task.date))"
+        
+        backgroundColor = task.list.color
     }
 }

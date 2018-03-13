@@ -66,11 +66,18 @@ class AddTaskViewController: UIViewController {
         tbc.setSelectIndex(from: 2, to: 1)
     }
     
-    func newTask() {
+    func newTask() -> Bool{
+        guard listCollectionView.selectedList != nil else {
+            alert(title: "Error", message: "The task must be in a list", button: "Ok")
+            return false
+        }
+        
         if taskNameButton.text?.count != 0 {
-            let t = Task.init(taskNameButton.text!, date: selectedDate)
+            let t = Task.init(taskNameButton.text!, date: selectedDate, list: listCollectionView.selectedList!)
             TaskManager.save(t)
         }
+        
+        return true
     }
     
     @IBAction func datePickerButtonPressed(_ sender: Any) {
@@ -120,8 +127,11 @@ class AddTaskViewController: UIViewController {
 
 extension AddTaskViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        newTask()
-        hide()
-        return true
+        if newTask() {
+            hide()
+            return true
+        } else {
+            return false
+        }
     }
 }

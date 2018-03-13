@@ -34,6 +34,23 @@ class TaskManager: BaseManager<Task> {
         return Array(t)
     }
     
+    class func belong(to list: List) -> [Task] {
+        let realm = try! Realm()
+        
+        let predicate = NSPredicate(format: "_list._id = %@", list.id)
+        
+        let result = realm.objects(Task.self).filter(predicate)
+        
+        return Array(result)
+    }
+    
+    class func belong(to list : List, date: Date) -> [Task]{
+        var tasks = get(at: date)
+        _ = tasks.remove(handler: { $0.id ==  list.id})
+        
+        return tasks
+    }
+    
     
     /// Return the number of task to do at a specific date
     ///

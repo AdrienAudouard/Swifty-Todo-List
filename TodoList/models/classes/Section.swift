@@ -21,6 +21,42 @@ class Section {
         cell = [Task]()
     }
     
+    class func createSectionWith(filter: List) -> [Section]{
+        let sections = createSections()
+        
+        for s in sections {
+            _ = s.cell.remove(handler: { $0.id != filter.id })
+        }
+        
+        return sections
+    }
+    
+    class func merge(s1: [Section], s2: [Section]) -> [Section] {
+        if s1.count == 0 {return s2}
+        if s2.count == 0 {return s1}
+        
+        var newSections = [Section]()
+        
+        for i in 0 ..< s1.count {
+            let s = Section(title: s1[i].title, height: s1[i].headerHeight)
+            
+            s.cell.append(contentsOf: s1[i].cell)
+            s.cell.append(contentsOf: s2[i].cell)
+            
+            newSections.append(s)
+        }
+        
+        return newSections
+    }
+    
+    class func remove(filter: List, sections: [Section]) -> [Section] {
+        for s in sections {
+            _ = s.cell.remove(handler: { $0.id == filter.id })
+        }
+        
+        return sections
+    }
+    
     class func createSections() -> [Section] {
         var sections = [Section]()
         var d = Date()

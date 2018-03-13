@@ -22,6 +22,7 @@ class Task: Object {
     @objc dynamic private var _date: Date = Date()
     @objc dynamic private var _dateFormated: String = ""
     @objc dynamic private var _done: Bool = false
+    @objc dynamic private var _list: List?
     
     var id: Int {
         return _id
@@ -54,6 +55,10 @@ class Task: Object {
         }
     }
     
+    var list: List {
+        return _list!
+    }
+    
     
     /// Return the hour of the deadline, with the pattern HH:mm
     var hourString: String {
@@ -63,12 +68,13 @@ class Task: Object {
         return formatter.string(from: _date)
     }
     
-    convenience init(_ name: String, date: Date) {
+    convenience init(_ name: String, date: Date, list: List) {
         self.init()
         
         self._id = TaskManager.incrementID()
         self._taskName = name
         self._date = date
+        self._list = list
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
@@ -81,6 +87,6 @@ class Task: Object {
     }
     
     override class func ignoredProperties() -> [String] {
-        return ["hourString", "id", "taskName", "date", "dateFormated", "done"]
+        return ["hourString", "id", "taskName", "date", "dateFormated", "done", "list"]
     }
 }

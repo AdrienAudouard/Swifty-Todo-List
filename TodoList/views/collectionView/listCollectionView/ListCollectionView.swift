@@ -18,6 +18,7 @@ class ListCollectionView: UICollectionView, UICollectionViewDelegate, UICollecti
     }
     
     var selectedCell: [Bool] = [Bool]()
+    var selectedList: List?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,6 +52,8 @@ class ListCollectionView: UICollectionView, UICollectionViewDelegate, UICollecti
             cell.isSelect = indexPath == indexP
             selectedCell[indexPath.row] = cell.isSelect
         }
+        
+        selectedList = lists[indexPath.row]
     }
     
     
