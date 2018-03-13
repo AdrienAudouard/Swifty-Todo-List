@@ -5,7 +5,7 @@ Realm / Swift 4 / Todo List
 
 ### All tasks
 
-![Screenshot](https://github.com/RidazFluent/Swifty-Todo-List/blob/master/Screenshots/IMG_1052.PNG)
+<img src="https://github.com/RidazFluent/Swifty-Todo-List/blob/master/Screenshots/IMG_1052.PNG" width="375" height="667">
 
 ## Todo 
 
