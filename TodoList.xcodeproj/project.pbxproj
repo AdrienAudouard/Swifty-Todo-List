@@ -7,14 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101B7860D9A7E1A97C9E87C7 /* Pods_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D50775D7C1A9E49B3DABF4 /* Pods_TodoList.framework */; };
+		7A2854E1204D919000690F20 /* ThemeChangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2854E0204D919000690F20 /* ThemeChangeProtocol.swift */; };
+		7A2854E3204D938D00690F20 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2854E2204D938D00690F20 /* UITableViewCell.swift */; };
+		7A2A0484204C12C600240822 /* CustomXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0483204C12C600240822 /* CustomXibView.swift */; };
+		7A2A0486204C152500240822 /* CustomXibSpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0485204C152500240822 /* CustomXibSpringView.swift */; };
+		7A2A0489204C1A7100240822 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0488204C1A7100240822 /* Task.swift */; };
+		7A2A048D204C2B1000240822 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A048C204C2B1000240822 /* Section.swift */; };
+		7A2A048F204C2E1100240822 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A048E204C2E1100240822 /* Realm.swift */; };
+		7A2A0492204C384900240822 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0491204C384900240822 /* String.swift */; };
+		7A2A0494204C3AEB00240822 /* TaskCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0493204C3AEB00240822 /* TaskCellModel.swift */; };
+		7A2A0496204C539A00240822 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0495204C539A00240822 /* NotificationManager.swift */; };
+		7A2CFD15205687E60009FBFC /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CFD14205687E60009FBFC /* BaseManager.swift */; };
+		7A2CFD1820568EBC0009FBFC /* SelectListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CFD1720568EBC0009FBFC /* SelectListCollectionView.swift */; };
+		7A2CFD1A20568ED90009FBFC /* SelectListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CFD1920568ED90009FBFC /* SelectListCollectionViewCell.swift */; };
+		7A4BFDAE20567DFF00F930FD /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BFDAD20567DFF00F930FD /* TaskManager.swift */; };
+		7A50DBE820484C50005B50D7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50DBE720484C50005B50D7 /* CustomTabBarController.swift */; };
+		7A50DBEA20484EBA005B50D7 /* Animater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50DBE920484EBA005B50D7 /* Animater.swift */; };
+		7A50DBEC20484F72005B50D7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */; };
 		7A55526C2046E7A500BA646E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55526B2046E7A500BA646E /* AppDelegate.swift */; };
 		7A55526E2046E7A500BA646E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55526D2046E7A500BA646E /* ViewController.swift */; };
 		7A5552712046E7A500BA646E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A55526F2046E7A500BA646E /* Main.storyboard */; };
 		7A5552732046E7A500BA646E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5552722046E7A500BA646E /* Assets.xcassets */; };
 		7A5552762046E7A500BA646E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5552742046E7A500BA646E /* LaunchScreen.storyboard */; };
+		7A65DEEC2052C2410066B424 /* CustomItemRamAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEEB2052C2410066B424 /* CustomItemRamAnimation.swift */; };
+		7A65DEEE2052C76E0066B424 /* CustomMainItemRamAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEED2052C76E0066B424 /* CustomMainItemRamAnimation.swift */; };
+		7A65DEF02052D1F70066B424 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEEF2052D1F70066B424 /* AddTaskViewController.swift */; };
+		7A65DEF22052DB4A0066B424 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A65DEF12052DB4A0066B424 /* LocalAuthentication.framework */; };
+		7A65DEF42052DC7C0066B424 /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEF32052DC7C0066B424 /* AuthentificationViewController.swift */; };
+		7A65DEF62052E28C0066B424 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEF52052E28C0066B424 /* RoundedButton.swift */; };
+		7A65DEF82052E4220066B424 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEF72052E4220066B424 /* CreatePasswordViewController.swift */; };
+		7A65DEFA2052F1030066B424 /* TouchIdPopUP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A65DEF92052F1030066B424 /* TouchIdPopUP.xib */; };
+		7A65DEFC2052F2B40066B424 /* TouchIdPopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEFB2052F2B40066B424 /* TouchIdPopUP.swift */; };
+		7A65DEFE205300D30066B424 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEFD205300D30066B424 /* UIViewController.swift */; };
+		7A882EA1205334570047BA74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A882EA0205334570047BA74 /* SettingsViewController.swift */; };
+		7A8D2BAC204C5B930085824C /* TaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BAB204C5B930085824C /* TaskProtocol.swift */; };
+		7A8D2BB0204CB5850085824C /* ChooseThemePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8D2BAF204CB5850085824C /* ChooseThemePopUp.xib */; };
+		7A8D2BB2204CB5F60085824C /* ChooseThemePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BB1204CB5F60085824C /* ChooseThemePopUp.swift */; };
+		7A8D2BB4204CBF490085824C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BB3204CBF490085824C /* Theme.swift */; };
+		7A8D2BB6204CBFC70085824C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BB5204CBFC70085824C /* UIColor.swift */; };
+		7A8D2BB8204CC1F10085824C /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BB7204CC1F10085824C /* AppPreferences.swift */; };
+		7A98F39820533D5400AEBB5F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F39720533D5400AEBB5F /* CalendarViewController.swift */; };
+		7A98F39A205346C000AEBB5F /* DateTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F399205346C000AEBB5F /* DateTaskTableViewCell.swift */; };
+		7A98F39C205346E900AEBB5F /* DateTaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F39B205346E900AEBB5F /* DateTaskTableView.swift */; };
+		7A98F3A020540B3700AEBB5F /* TaskDoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F39F20540B3700AEBB5F /* TaskDoneDelegate.swift */; };
+		7A98F3A32054241900AEBB5F /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3A22054241900AEBB5F /* ColorCollectionViewCell.swift */; };
+		7A98F3A52054244600AEBB5F /* ColorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3A42054244600AEBB5F /* ColorCollectionView.swift */; };
+		7A98F3A72054280300AEBB5F /* InitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3A62054280300AEBB5F /* InitListViewController.swift */; };
+		7A98F3AA2054369C00AEBB5F /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3A92054369C00AEBB5F /* ListTableView.swift */; };
+		7A98F3AC205436AF00AEBB5F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3AB205436AF00AEBB5F /* ListTableViewCell.swift */; };
+		7A98F3AE2054380C00AEBB5F /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3AD2054380C00AEBB5F /* List.swift */; };
+		7A98F3B02054383300AEBB5F /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3AF2054383300AEBB5F /* ListManager.swift */; };
+		7A98F3B42054621F00AEBB5F /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3B32054621F00AEBB5F /* ListCollectionViewCell.swift */; };
+		7A98F3B62054623500AEBB5F /* ListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F3B52054623500AEBB5F /* ListCollectionView.swift */; };
+		7AC5ACAF204712CD004C4F4E /* TacheTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC5ACAE204712CD004C4F4E /* TacheTableView.swift */; };
+		7AC5ACB1204714BA004C4F4E /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC5ACB0204714BA004C4F4E /* DayTableViewCell.swift */; };
+		7AC5ACB3204717A3004C4F4E /* TacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC5ACB2204717A3004C4F4E /* TacheTableViewCell.swift */; };
+		7AC5ACB920471BF0004C4F4E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC5ACB820471BF0004C4F4E /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A2854E0204D919000690F20 /* ThemeChangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeProtocol.swift; sourceTree = "<group>"; };
+		7A2854E2204D938D00690F20 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		7A2A0483204C12C600240822 /* CustomXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibView.swift; sourceTree = "<group>"; };
+		7A2A0485204C152500240822 /* CustomXibSpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibSpringView.swift; sourceTree = "<group>"; };
+		7A2A0488204C1A7100240822 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		7A2A048C204C2B1000240822 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		7A2A048E204C2E1100240822 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		7A2A0491204C384900240822 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7A2A0493204C3AEB00240822 /* TaskCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellModel.swift; sourceTree = "<group>"; };
+		7A2A0495204C539A00240822 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		7A2CFD14205687E60009FBFC /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		7A2CFD1720568EBC0009FBFC /* SelectListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListCollectionView.swift; sourceTree = "<group>"; };
+		7A2CFD1920568ED90009FBFC /* SelectListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A4BFDAD20567DFF00F930FD /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		7A50DBE720484C50005B50D7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		7A50DBE920484EBA005B50D7 /* Animater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animater.swift; sourceTree = "<group>"; };
+		7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		7A5552682046E7A500BA646E /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55526B2046E7A500BA646E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A55526D2046E7A500BA646E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +91,43 @@
 		7A5552722046E7A500BA646E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5552752046E7A500BA646E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5552772046E7A500BA646E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A65DEEB2052C2410066B424 /* CustomItemRamAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomItemRamAnimation.swift; sourceTree = "<group>"; };
+		7A65DEED2052C76E0066B424 /* CustomMainItemRamAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainItemRamAnimation.swift; sourceTree = "<group>"; };
+		7A65DEEF2052D1F70066B424 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		7A65DEF12052DB4A0066B424 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		7A65DEF32052DC7C0066B424 /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
+		7A65DEF52052E28C0066B424 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		7A65DEF72052E4220066B424 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		7A65DEF92052F1030066B424 /* TouchIdPopUP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchIdPopUP.xib; sourceTree = "<group>"; };
+		7A65DEFB2052F2B40066B424 /* TouchIdPopUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIdPopUP.swift; sourceTree = "<group>"; };
+		7A65DEFD205300D30066B424 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7A882EA0205334570047BA74 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7A8D2BAB204C5B930085824C /* TaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProtocol.swift; sourceTree = "<group>"; };
+		7A8D2BAF204CB5850085824C /* ChooseThemePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseThemePopUp.xib; sourceTree = "<group>"; };
+		7A8D2BB1204CB5F60085824C /* ChooseThemePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseThemePopUp.swift; sourceTree = "<group>"; };
+		7A8D2BB3204CBF490085824C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7A8D2BB5204CBFC70085824C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7A8D2BB7204CC1F10085824C /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		7A98F39720533D5400AEBB5F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		7A98F399205346C000AEBB5F /* DateTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTaskTableViewCell.swift; sourceTree = "<group>"; };
+		7A98F39B205346E900AEBB5F /* DateTaskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTaskTableView.swift; sourceTree = "<group>"; };
+		7A98F39F20540B3700AEBB5F /* TaskDoneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDoneDelegate.swift; sourceTree = "<group>"; };
+		7A98F3A22054241900AEBB5F /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A98F3A42054244600AEBB5F /* ColorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionView.swift; sourceTree = "<group>"; };
+		7A98F3A62054280300AEBB5F /* InitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitListViewController.swift; sourceTree = "<group>"; };
+		7A98F3A92054369C00AEBB5F /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
+		7A98F3AB205436AF00AEBB5F /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		7A98F3AD2054380C00AEBB5F /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		7A98F3AF2054383300AEBB5F /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		7A98F3B32054621F00AEBB5F /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A98F3B52054623500AEBB5F /* ListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionView.swift; sourceTree = "<group>"; };
+		7AC5ACAE204712CD004C4F4E /* TacheTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TacheTableView.swift; sourceTree = "<group>"; };
+		7AC5ACB0204714BA004C4F4E /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		7AC5ACB2204717A3004C4F4E /* TacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TacheTableViewCell.swift; sourceTree = "<group>"; };
+		7AC5ACB820471BF0004C4F4E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		81D50775D7C1A9E49B3DABF4 /* Pods_TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE2CBA1FE1389E10989D53C /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
+		F0389EAEC4F1D67F74A79E4D /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +135,154 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A65DEF22052DB4A0066B424 /* LocalAuthentication.framework in Frameworks */,
+				101B7860D9A7E1A97C9E87C7 /* Pods_TodoList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C675286A7C454D3FC6A920D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2CBA1FE1389E10989D53C /* Pods-TodoList.debug.xcconfig */,
+				F0389EAEC4F1D67F74A79E4D /* Pods-TodoList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1450FADB3996CFCCD9F76CED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A65DEF12052DB4A0066B424 /* LocalAuthentication.framework */,
+				81D50775D7C1A9E49B3DABF4 /* Pods_TodoList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A2A047A204C10D000240822 /* uiview */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A0483204C12C600240822 /* CustomXibView.swift */,
+				7A2A0485204C152500240822 /* CustomXibSpringView.swift */,
+				7A8D2BB1204CB5F60085824C /* ChooseThemePopUp.swift */,
+				7A65DEFB2052F2B40066B424 /* TouchIdPopUP.swift */,
+			);
+			path = uiview;
+			sourceTree = "<group>";
+		};
+		7A2A0480204C128000240822 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				7A8D2BAF204CB5850085824C /* ChooseThemePopUp.xib */,
+				7A65DEF92052F1030066B424 /* TouchIdPopUP.xib */,
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		7A2A0487204C1A6400240822 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7A4BFDAF205680E400F930FD /* animations */,
+				7A8D2BAA204C5B6E0085824C /* classes */,
+				7A8D2BA9204C5B660085824C /* protocols */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		7A2A048A204C1DEB00240822 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3A1205423F400AEBB5F /* collectionView */,
+				7A2A047A204C10D000240822 /* uiview */,
+				7AC5ACAD204710EA004C4F4E /* tableView */,
+				7A65DEF52052E28C0066B424 /* RoundedButton.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		7A2A048B204C1DFE00240822 /* utilitys */ = {
+			isa = PBXGroup;
+			children = (
+				7A50DBE920484EBA005B50D7 /* Animater.swift */,
+				7A2A0495204C539A00240822 /* NotificationManager.swift */,
+				7A8D2BB7204CC1F10085824C /* AppPreferences.swift */,
+			);
+			path = utilitys;
+			sourceTree = "<group>";
+		};
+		7A2A0490204C2E1900240822 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A048E204C2E1100240822 /* Realm.swift */,
+				7A2A0491204C384900240822 /* String.swift */,
+				7A8D2BB5204CBFC70085824C /* UIColor.swift */,
+				7A2854E2204D938D00690F20 /* UITableViewCell.swift */,
+				7A65DEFD205300D30066B424 /* UIViewController.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		7A2CFD1620568E930009FBFC /* selectListCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7A2CFD1720568EBC0009FBFC /* SelectListCollectionView.swift */,
+				7A2CFD1920568ED90009FBFC /* SelectListCollectionViewCell.swift */,
+			);
+			path = selectListCollectionView;
+			sourceTree = "<group>";
+		};
+		7A4BFDAB20567DD700F930FD /* list */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3AD2054380C00AEBB5F /* List.swift */,
+				7A98F3AF2054383300AEBB5F /* ListManager.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		7A4BFDAC20567DE200F930FD /* task */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A0488204C1A7100240822 /* Task.swift */,
+				7A4BFDAD20567DFF00F930FD /* TaskManager.swift */,
+			);
+			path = task;
+			sourceTree = "<group>";
+		};
+		7A4BFDAF205680E400F930FD /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				7A65DEEB2052C2410066B424 /* CustomItemRamAnimation.swift */,
+				7A65DEED2052C76E0066B424 /* CustomMainItemRamAnimation.swift */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		7A50DBED20484F7A005B50D7 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				7A55526D2046E7A500BA646E /* ViewController.swift */,
+				7A50DBE720484C50005B50D7 /* CustomTabBarController.swift */,
+				7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */,
+				7A65DEEF2052D1F70066B424 /* AddTaskViewController.swift */,
+				7A65DEF32052DC7C0066B424 /* AuthentificationViewController.swift */,
+				7A65DEF72052E4220066B424 /* CreatePasswordViewController.swift */,
+				7A882EA0205334570047BA74 /* SettingsViewController.swift */,
+				7A98F39720533D5400AEBB5F /* CalendarViewController.swift */,
+				7A98F3A62054280300AEBB5F /* InitListViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
 		7A55525F2046E7A500BA646E = {
 			isa = PBXGroup;
 			children = (
 				7A55526A2046E7A500BA646E /* TodoList */,
 				7A5552692046E7A500BA646E /* Products */,
+				0C675286A7C454D3FC6A920D /* Pods */,
+				1450FADB3996CFCCD9F76CED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +297,117 @@
 		7A55526A2046E7A500BA646E /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				7A2A0490204C2E1900240822 /* extensions */,
+				7A2A048B204C1DFE00240822 /* utilitys */,
+				7A2A048A204C1DEB00240822 /* views */,
+				7A2A0487204C1A6400240822 /* models */,
+				7A2A0480204C128000240822 /* xibs */,
+				7A50DBED20484F7A005B50D7 /* vc */,
 				7A55526B2046E7A500BA646E /* AppDelegate.swift */,
-				7A55526D2046E7A500BA646E /* ViewController.swift */,
 				7A55526F2046E7A500BA646E /* Main.storyboard */,
 				7A5552722046E7A500BA646E /* Assets.xcassets */,
 				7A5552742046E7A500BA646E /* LaunchScreen.storyboard */,
 				7A5552772046E7A500BA646E /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		7A8D2BA9204C5B660085824C /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7A8D2BAB204C5B930085824C /* TaskProtocol.swift */,
+				7A2854E0204D919000690F20 /* ThemeChangeProtocol.swift */,
+				7A98F39F20540B3700AEBB5F /* TaskDoneDelegate.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		7A8D2BAA204C5B6E0085824C /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A4BFDAC20567DE200F930FD /* task */,
+				7A4BFDAB20567DD700F930FD /* list */,
+				7A2A048C204C2B1000240822 /* Section.swift */,
+				7A2A0493204C3AEB00240822 /* TaskCellModel.swift */,
+				7A8D2BB3204CBF490085824C /* Theme.swift */,
+				7A2CFD14205687E60009FBFC /* BaseManager.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		7A98F39D2053480400AEBB5F /* tacheTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7AC2F820204892FB000A7E47 /* cell */,
+				7AC5ACAE204712CD004C4F4E /* TacheTableView.swift */,
+			);
+			path = tacheTableView;
+			sourceTree = "<group>";
+		};
+		7A98F39E20540A4600AEBB5F /* dateTaskTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F399205346C000AEBB5F /* DateTaskTableViewCell.swift */,
+				7A98F39B205346E900AEBB5F /* DateTaskTableView.swift */,
+			);
+			path = dateTaskTableView;
+			sourceTree = "<group>";
+		};
+		7A98F3A1205423F400AEBB5F /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7A2CFD1620568E930009FBFC /* selectListCollectionView */,
+				7A98F3B2205461EB00AEBB5F /* listCollectionView */,
+				7A98F3B1205461CE00AEBB5F /* colorCollectionView */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		7A98F3A82054368000AEBB5F /* listTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3A92054369C00AEBB5F /* ListTableView.swift */,
+				7A98F3AB205436AF00AEBB5F /* ListTableViewCell.swift */,
+			);
+			path = listTableView;
+			sourceTree = "<group>";
+		};
+		7A98F3B1205461CE00AEBB5F /* colorCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3A22054241900AEBB5F /* ColorCollectionViewCell.swift */,
+				7A98F3A42054244600AEBB5F /* ColorCollectionView.swift */,
+			);
+			path = colorCollectionView;
+			sourceTree = "<group>";
+		};
+		7A98F3B2205461EB00AEBB5F /* listCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3B32054621F00AEBB5F /* ListCollectionViewCell.swift */,
+				7A98F3B52054623500AEBB5F /* ListCollectionView.swift */,
+			);
+			path = listCollectionView;
+			sourceTree = "<group>";
+		};
+		7AC2F820204892FB000A7E47 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7AC5ACB0204714BA004C4F4E /* DayTableViewCell.swift */,
+				7AC5ACB2204717A3004C4F4E /* TacheTableViewCell.swift */,
+				7AC5ACB820471BF0004C4F4E /* CustomTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		7AC5ACAD204710EA004C4F4E /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F3A82054368000AEBB5F /* listTableView */,
+				7A98F39E20540A4600AEBB5F /* dateTaskTableView */,
+				7A98F39D2053480400AEBB5F /* tacheTableView */,
+			);
+			path = tableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A55527A2046E7A500BA646E /* Build configuration list for PBXNativeTarget "TodoList" */;
 			buildPhases = (
+				DA3E8565810250F662C6E447 /* [CP] Check Pods Manifest.lock */,
 				7A5552642046E7A500BA646E /* Sources */,
 				7A5552652046E7A500BA646E /* Frameworks */,
 				7A5552662046E7A500BA646E /* Resources */,
+				727819EA61F38B61C2E7AEF5 /* [CP] Embed Pods Frameworks */,
+				6BE7778BC2C25532ACE14900 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +472,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A65DEFA2052F1030066B424 /* TouchIdPopUP.xib in Resources */,
+				7A8D2BB0204CB5850085824C /* ChooseThemePopUp.xib in Resources */,
 				7A5552762046E7A500BA646E /* LaunchScreen.storyboard in Resources */,
 				7A5552732046E7A500BA646E /* Assets.xcassets in Resources */,
 				7A5552712046E7A500BA646E /* Main.storyboard in Resources */,
@@ -131,13 +482,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BE7778BC2C25532ACE14900 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoList/Pods-TodoList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		727819EA61F38B61C2E7AEF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
+				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RidazSwiftyFramework/RidazSwiftyFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidazSwiftyFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA3E8565810250F662C6E447 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A5552642046E7A500BA646E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A50DBEA20484EBA005B50D7 /* Animater.swift in Sources */,
+				7AC5ACAF204712CD004C4F4E /* TacheTableView.swift in Sources */,
+				7A98F39820533D5400AEBB5F /* CalendarViewController.swift in Sources */,
+				7A882EA1205334570047BA74 /* SettingsViewController.swift in Sources */,
+				7A2A0496204C539A00240822 /* NotificationManager.swift in Sources */,
+				7A8D2BB4204CBF490085824C /* Theme.swift in Sources */,
 				7A55526E2046E7A500BA646E /* ViewController.swift in Sources */,
+				7A98F39A205346C000AEBB5F /* DateTaskTableViewCell.swift in Sources */,
+				7A2854E1204D919000690F20 /* ThemeChangeProtocol.swift in Sources */,
+				7AC5ACB1204714BA004C4F4E /* DayTableViewCell.swift in Sources */,
+				7A8D2BAC204C5B930085824C /* TaskProtocol.swift in Sources */,
+				7A2854E3204D938D00690F20 /* UITableViewCell.swift in Sources */,
+				7A98F3A32054241900AEBB5F /* ColorCollectionViewCell.swift in Sources */,
+				7A98F3A52054244600AEBB5F /* ColorCollectionView.swift in Sources */,
+				7A98F3AE2054380C00AEBB5F /* List.swift in Sources */,
+				7A98F3A72054280300AEBB5F /* InitListViewController.swift in Sources */,
+				7A65DEEE2052C76E0066B424 /* CustomMainItemRamAnimation.swift in Sources */,
+				7A2A0484204C12C600240822 /* CustomXibView.swift in Sources */,
+				7A2CFD15205687E60009FBFC /* BaseManager.swift in Sources */,
+				7AC5ACB920471BF0004C4F4E /* CustomTableViewCell.swift in Sources */,
+				7A98F3B02054383300AEBB5F /* ListManager.swift in Sources */,
+				7A98F3AA2054369C00AEBB5F /* ListTableView.swift in Sources */,
+				7A65DEFC2052F2B40066B424 /* TouchIdPopUP.swift in Sources */,
+				7A65DEF02052D1F70066B424 /* AddTaskViewController.swift in Sources */,
+				7A65DEFE205300D30066B424 /* UIViewController.swift in Sources */,
+				7A8D2BB8204CC1F10085824C /* AppPreferences.swift in Sources */,
+				7A2A0489204C1A7100240822 /* Task.swift in Sources */,
+				7A4BFDAE20567DFF00F930FD /* TaskManager.swift in Sources */,
+				7A2A048F204C2E1100240822 /* Realm.swift in Sources */,
+				7A8D2BB6204CBFC70085824C /* UIColor.swift in Sources */,
+				7A2CFD1A20568ED90009FBFC /* SelectListCollectionViewCell.swift in Sources */,
+				7A2A0494204C3AEB00240822 /* TaskCellModel.swift in Sources */,
+				7AC5ACB3204717A3004C4F4E /* TacheTableViewCell.swift in Sources */,
+				7A98F3B62054623500AEBB5F /* ListCollectionView.swift in Sources */,
+				7A65DEF82052E4220066B424 /* CreatePasswordViewController.swift in Sources */,
+				7A8D2BB2204CB5F60085824C /* ChooseThemePopUp.swift in Sources */,
+				7A98F39C205346E900AEBB5F /* DateTaskTableView.swift in Sources */,
+				7A2CFD1820568EBC0009FBFC /* SelectListCollectionView.swift in Sources */,
+				7A65DEEC2052C2410066B424 /* CustomItemRamAnimation.swift in Sources */,
+				7A2A0492204C384900240822 /* String.swift in Sources */,
+				7A50DBEC20484F72005B50D7 /* LoadingViewController.swift in Sources */,
+				7A98F3B42054621F00AEBB5F /* ListCollectionViewCell.swift in Sources */,
 				7A55526C2046E7A500BA646E /* AppDelegate.swift in Sources */,
+				7A98F3AC205436AF00AEBB5F /* ListTableViewCell.swift in Sources */,
+				7A2A048D204C2B1000240822 /* Section.swift in Sources */,
+				7A65DEF42052DC7C0066B424 /* AuthentificationViewController.swift in Sources */,
+				7A65DEF62052E28C0066B424 /* RoundedButton.swift in Sources */,
+				7A98F3A020540B3700AEBB5F /* TaskDoneDelegate.swift in Sources */,
+				7A2A0486204C152500240822 /* CustomXibSpringView.swift in Sources */,
+				7A50DBE820484C50005B50D7 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +741,7 @@
 		};
 		7A55527B2046E7A500BA646E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE2CBA1FE1389E10989D53C /* Pods-TodoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +757,7 @@
 		};
 		7A55527C2046E7A500BA646E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0389EAEC4F1D67F74A79E4D /* Pods-TodoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
