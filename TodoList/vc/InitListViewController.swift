@@ -52,7 +52,7 @@ class InitListViewController: UIViewController {
         
         taskNameTF.text = ""
         
-        listTableView.scrollToRow(at: IndexPath.init(row: listTableView.lists.count - 1, section: 0), at: .bottom, animated: true)
+        //listTableView.scrollToRow(at: IndexPath.init(row: listTableView.lists.count - 1, section: 0), at: .bottom, animated: true)
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {

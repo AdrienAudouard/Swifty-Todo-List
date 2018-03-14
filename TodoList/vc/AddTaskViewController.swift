@@ -74,6 +74,7 @@ class AddTaskViewController: UIViewController {
         
         if taskNameButton.text?.count != 0 {
             let t = Task.init(taskNameButton.text!, date: selectedDate, list: listCollectionView.selectedList!)
+            print("new task: \(t)")
             TaskManager.save(t)
         }
         

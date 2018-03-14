@@ -12,13 +12,11 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
     var lists: [List] = [List]() {
         didSet {
             selectedCell = [Bool](repeating: false, count: lists.count)
-            selectedList.removeAll()
             self.reloadData()
         }
     }
     
     var selectedCell: [Bool] = [Bool]()
-    var selectedList: [List] = [List]()
     
     weak var listDelegate: FilterListDelegate?
     
@@ -48,18 +46,58 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
         return CGSize(width: width, height: 50);
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! SelectListCollectionViewCell
-        if cell.isSelect {
-            selectedList.remove(at: selectedList.index(of: lists[indexPath.row])!)
-            listDelegate?.removeFilter(list: lists[indexPath.row])
-        } else {
-            selectedList.append(lists[indexPath.row])
-            listDelegate?.addFilter(list: lists[indexPath.row])
+    
+    func deselectAllCellExceptFirst() {
+        for indexP in self.indexPathsForVisibleItems {
+            if indexP.row == 0 {
+                continue
+            }
+            
+            let cell = self.cellForItem(at: indexP) as! SelectListCollectionViewCell
+            
+            cell.isSelect = false
         }
         
-        cell.isSelect = !cell.isSelect
+        selectedCell = [Bool].init(repeating: false, count: selectedCell.count)
+    }
+    
+    func deslectFirstCell () {
+        guard let firstCell = self.cellForItem(at: IndexPath.init(row: 0, section: 0)) as? SelectListCollectionViewCell else {
+            return
+        }
         
-        selectedCell[indexPath.row] = cell.isSelect
+        if firstCell.isSelect {
+            listDelegate?.removeAll()
+        }
+        
+        firstCell.isSelect = false
+        selectedCell[0] = false
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SelectListCollectionViewCell
+        
+        if indexPath.row == 0 {
+            deselectAllCellExceptFirst()
+            if !cell.isSelect {
+                print("select all")
+                listDelegate?.printAllTask()
+            } else {
+                listDelegate?.removeAll()
+            }
+            cell.isSelect = !cell.isSelect
+            selectedCell[0] = cell.isSelect
+        } else {
+            deslectFirstCell()
+            if cell.isSelect {
+                listDelegate?.removeFilter(list: lists[indexPath.row])
+            } else {
+                listDelegate?.addFilter(list: lists[indexPath.row])
+            }
+            
+            cell.isSelect = !cell.isSelect
+            
+            selectedCell[indexPath.row] = cell.isSelect
+        }
     }
 }

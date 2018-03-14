@@ -13,6 +13,7 @@ class ListTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     var lists: [List] = [List]() {
         didSet {
             self.reloadData()
+            scrollToRow(at: IndexPath.init(row: lists.count - 2, section: 0), at: .bottom, animated: true)
         }
     }
     
@@ -23,12 +24,14 @@ class ListTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         dataSource = self
     }
     
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lists.count
+        return lists.count - 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -38,7 +41,7 @@ class ListTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
         
-        cell.list = lists[indexPath.row]
+        cell.list = lists[indexPath.row + 1]
         cell.selectionStyle = .none
         
         return cell
@@ -48,7 +51,7 @@ class ListTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         if editingStyle == .delete {
             tableView.beginUpdates()
             
-            let listRemoved = lists.remove(at: indexPath.row)
+            let listRemoved = lists.remove(at: indexPath.row + 1)
             ListManager.remove(listRemoved)
             
             tableView.deleteRows(at: [indexPath], with: .right)

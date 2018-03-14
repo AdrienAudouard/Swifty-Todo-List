@@ -28,20 +28,20 @@ class ListCollectionView: UICollectionView, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lists.count
+        return lists.count - 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
         
-        item.list = lists[indexPath.row]
-        item.isSelect = selectedCell[indexPath.row]
+        item.list = lists[indexPath.row + 1]
+        item.isSelect = selectedCell[indexPath.row + 1]
         return item
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 40 + lists[indexPath.row].name.count * 8
+        let width = 40 + lists[indexPath.row + 1].name.count * 8
         return CGSize(width: width, height: 40);
     }
     
@@ -50,10 +50,10 @@ class ListCollectionView: UICollectionView, UICollectionViewDelegate, UICollecti
             let cell = collectionView.cellForItem(at: indexP) as! ListCollectionViewCell
             
             cell.isSelect = indexPath == indexP
-            selectedCell[indexPath.row] = cell.isSelect
+            selectedCell[indexPath.row + 1] = cell.isSelect
         }
         
-        selectedList = lists[indexPath.row]
+        selectedList = lists[indexPath.row + 1]
     }
     
     

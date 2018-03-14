@@ -31,6 +31,7 @@ class ListManager: BaseManager<List> {
             return
         }
         
+        _ = create(name: "All", color: UIColor(hex: "#000000"))
         _ = create(name: "Work", color: UIColor(hex: "3498db"))
         _ = create(name: "Personnal", color: UIColor(hex: "2ecc71"))
     }

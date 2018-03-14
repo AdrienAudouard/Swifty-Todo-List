@@ -28,6 +28,8 @@ class Section {
             _ = s.cell.remove(handler: { $0.id != filter.id })
         }
         
+        print("count with filter \(sections.count)")
+        
         return sections
     }
     
@@ -53,6 +55,26 @@ class Section {
         for s in sections {
             _ = s.cell.remove(handler: { $0.id == filter.id })
         }
+        
+        return sections
+    }
+    
+    class func createEmptySections() -> [Section] {
+        var sections = [Section]()
+        var d = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        formatter.locale = Locale(identifier: "en_gb")
+        
+        sections.append(Section(title: "Today", height: 60))
+        
+        for _ in 0...5 {
+            d = d.addingTimeInterval(60 * 60 * 24)
+            
+            sections.append(Section(title: formatter.string(from: d).capitalizingFirstLetter(), height: 60))
+        }
+        
+        sections.append(Section(title: "Later", height: 60))
         
         return sections
     }

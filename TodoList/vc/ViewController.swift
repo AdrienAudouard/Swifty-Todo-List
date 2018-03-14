@@ -115,12 +115,25 @@ extension ViewController: TaskProtocol {
 }
 
 extension ViewController: FilterListDelegate {
+    func printAllTask() {
+        sections = Section.createSections()
+    }
+    
+    func removeAll() {
+        sections = Section.createEmptySections()
+        print("nb section: \(sections.count)")
+    }
+    
     func addFilter(list: List) {
+        print("showing \(list.name)")
         sections = Section.merge(s1: sections, s2: Section.createSectionWith(filter: list))
+        print("nb sections after merge: \(sections.count)")
     }
     
     func removeFilter(list: List) {
+        print("not showing \(list.name)")
         sections = Section.remove(filter: list, sections: sections)
+        print("nb sections after remove: \(sections.count)")
     }
     
     
