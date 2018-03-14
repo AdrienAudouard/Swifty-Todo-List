@@ -21,6 +21,20 @@ class Section {
         cell = [Task]()
     }
     
+    class func createSectionWithDoneTasks() -> [Section]{
+        let tasks = TaskManager.getAllDone()
+        
+        let dic = Dictionary(grouping: tasks, by: {$0.dateFormated})
+        var sections = [Section]()
+        
+        for (date, dateTasks) in dic {
+            sections.append(Section(title: date, height: 60))
+            sections.last!.cell = dateTasks
+        }
+        
+        return sections
+    }
+    
     class func createSectionWith(filter: List) -> [Section]{
         let sections = createSections()
         

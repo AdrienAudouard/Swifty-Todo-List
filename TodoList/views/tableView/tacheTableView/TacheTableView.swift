@@ -72,12 +72,8 @@ class TacheTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         return  (tableView.dequeueReusableCell(withIdentifier: "DayTableViewCell") as! DayTableViewCell).height
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    }
-    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return indexPath.section != 0
+        return true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

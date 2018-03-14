@@ -38,7 +38,7 @@ class DateTaskTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateTaskTableViewCell", for: indexPath) as! DateTaskTableViewCell
         
         cell.task = tasks[indexPath.row]
-        
+        cell.selectionStyle = .none
         return cell
     }
     

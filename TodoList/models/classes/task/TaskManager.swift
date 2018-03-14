@@ -95,4 +95,12 @@ class TaskManager: BaseManager<Task> {
         
         return Array(t)
     }
+    
+    class func getAllDone() -> [Task]{
+        let realm = try! Realm()
+        
+        let resulsts = realm.objects(Task.self).filter("_done = true").sorted(byKeyPath: "_date")
+        
+        return Array(resulsts)
+    }
 }
