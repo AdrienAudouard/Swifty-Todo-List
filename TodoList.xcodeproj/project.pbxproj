@@ -26,7 +26,7 @@
 		7A50DBEA20484EBA005B50D7 /* Animater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50DBE920484EBA005B50D7 /* Animater.swift */; };
 		7A50DBEC20484F72005B50D7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */; };
 		7A55526C2046E7A500BA646E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55526B2046E7A500BA646E /* AppDelegate.swift */; };
-		7A55526E2046E7A500BA646E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55526D2046E7A500BA646E /* ViewController.swift */; };
+		7A55526E2046E7A500BA646E /* TaskViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55526D2046E7A500BA646E /* TaskViewerViewController.swift */; };
 		7A5552712046E7A500BA646E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A55526F2046E7A500BA646E /* Main.storyboard */; };
 		7A5552732046E7A500BA646E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5552722046E7A500BA646E /* Assets.xcassets */; };
 		7A5552762046E7A500BA646E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5552742046E7A500BA646E /* LaunchScreen.storyboard */; };
@@ -88,7 +88,7 @@
 		7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		7A5552682046E7A500BA646E /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55526B2046E7A500BA646E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A55526D2046E7A500BA646E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A55526D2046E7A500BA646E /* TaskViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewerViewController.swift; sourceTree = "<group>"; };
 		7A5552702046E7A500BA646E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A5552722046E7A500BA646E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5552752046E7A500BA646E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		7A50DBED20484F7A005B50D7 /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				7A55526D2046E7A500BA646E /* ViewController.swift */,
+				7A55526D2046E7A500BA646E /* TaskViewerViewController.swift */,
 				7A50DBE720484C50005B50D7 /* CustomTabBarController.swift */,
 				7A50DBEB20484F72005B50D7 /* LoadingViewController.swift */,
 				7A65DEEF2052D1F70066B424 /* AddTaskViewController.swift */,
@@ -570,7 +570,7 @@
 				7A882EA1205334570047BA74 /* SettingsViewController.swift in Sources */,
 				7A2A0496204C539A00240822 /* NotificationManager.swift in Sources */,
 				7A8D2BB4204CBF490085824C /* Theme.swift in Sources */,
-				7A55526E2046E7A500BA646E /* ViewController.swift in Sources */,
+				7A55526E2046E7A500BA646E /* TaskViewerViewController.swift in Sources */,
 				7A98F39A205346C000AEBB5F /* DateTaskTableViewCell.swift in Sources */,
 				7A2854E1204D919000690F20 /* ThemeChangeProtocol.swift in Sources */,
 				7AC5ACB1204714BA004C4F4E /* DayTableViewCell.swift in Sources */,

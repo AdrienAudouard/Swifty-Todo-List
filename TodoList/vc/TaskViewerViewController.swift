@@ -13,7 +13,7 @@ import Spring
 import BulletinBoard
 import UserNotifications
 
-class ViewController: UIViewController {
+class TaskViewerViewController: UIViewController {
     
     var bulletinManager: BulletinManager?
     var sections: [Section]! {
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: TaskProtocol {
+extension TaskViewerViewController: TaskProtocol {
     func mustRemoveTask(task: Task) {
         TaskManager.remove(task)
         reloadData()
@@ -114,7 +114,7 @@ extension ViewController: TaskProtocol {
     }
 }
 
-extension ViewController: FilterListDelegate {
+extension TaskViewerViewController: FilterListDelegate {
     func printAllTask() {
         sections = Section.createSections()
     }
@@ -139,7 +139,7 @@ extension ViewController: FilterListDelegate {
     
 }
 
-extension ViewController: ThemeChangeProtocol {
+extension TaskViewerViewController: ThemeChangeProtocol {
     func themeDidChange(theme newTheme: Theme) {
         AppPreferences.sharedInstance.theme = newTheme
         //applyTheme()
