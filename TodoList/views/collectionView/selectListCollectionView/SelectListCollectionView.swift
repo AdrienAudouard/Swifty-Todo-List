@@ -61,7 +61,7 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
         selectedCell = [Bool].init(repeating: false, count: selectedCell.count)
     }
     
-    func deslectFirstCell () {
+    func deselectFirstCell () {
         guard let firstCell = self.cellForItem(at: IndexPath.init(row: 0, section: 0)) as? SelectListCollectionViewCell else {
             return
         }
@@ -80,7 +80,6 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
         if indexPath.row == 0 {
             deselectAllCellExceptFirst()
             if !cell.isSelect {
-                print("select all")
                 listDelegate?.printAllTask()
             } else {
                 listDelegate?.removeAll()
@@ -88,7 +87,7 @@ class SelectListCollectionView: UICollectionView, UICollectionViewDelegate, UICo
             cell.isSelect = !cell.isSelect
             selectedCell[0] = cell.isSelect
         } else {
-            deslectFirstCell()
+            deselectFirstCell()
             if cell.isSelect {
                 listDelegate?.removeFilter(list: lists[indexPath.row])
             } else {

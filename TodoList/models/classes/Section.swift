@@ -25,7 +25,7 @@ class Section {
         let sections = createSections()
         
         for s in sections {
-            _ = s.cell.remove(handler: { $0.id != filter.id })
+            _ = s.cell.remove(handler: { $0.list.id != filter.id })
         }
         
         print("count with filter \(sections.count)")
@@ -53,7 +53,7 @@ class Section {
     
     class func remove(filter: List, sections: [Section]) -> [Section] {
         for s in sections {
-            _ = s.cell.remove(handler: { $0.id == filter.id })
+            _ = s.cell.remove(handler: { $0.list.id == filter.id })
         }
         
         return sections
