@@ -10,6 +10,9 @@ PODS:
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
   - RidazSwiftyFramework (0.0.2)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
   - Spring (1.0.5)
 
 DEPENDENCIES:
@@ -20,6 +23,8 @@ DEPENDENCIES:
   - RAMAnimatedTabBarController
   - RealmSwift
   - RidazSwiftyFramework (from `https://github.com/RidazFluent/RidazSwiftyFramework.git`, tag `0.0.2`)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
 
 EXTERNAL SOURCES:
@@ -46,8 +51,10 @@ SPEC CHECKSUMS:
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   RidazSwiftyFramework: 20d4efc39264b3556d63c91bfe40ef93e5db501e
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
 
-PODFILE CHECKSUM: 8f6e453cb706505a95a7189b4738d3cd07d70010
+PODFILE CHECKSUM: 012735e61c7bf8ebad45506b40af43c46087dffa
 
 COCOAPODS: 1.4.0.beta.2
