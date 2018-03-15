@@ -26,6 +26,10 @@ class SettingsViewController: UIViewController {
         touchIDSwitch.setOn(AppPreferences.sharedInstance.useTouchId, animated: false)
         
         removePasswordButton.setTitle(AppPreferences.sharedInstance.usePassword ? "Remove the password" : "Use a password", for: .normal)
+        
+        NotificationManager.sharedInstance.notHavePermission {
+            self.notificationSwitch.isOn = false
+        }
     }
     
     func version() -> String {
@@ -111,6 +115,14 @@ class SettingsViewController: UIViewController {
             removePassword()
         } else {
             activatePassword()
+        }
+    }
+    
+    @IBAction func notificationPushSwitchValueChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            
+        } else {
+            
         }
     }
 

@@ -34,14 +34,12 @@ class TaskViewerViewController: UIViewController {
         super.viewDidLoad()
         
         let chooseThemePopUp = ChooseThemePopUp(frame: self.view.bounds)
-        chooseThemePopUp.delegate = self
-        //view.addSubview(chooseThemePopUp)
         
         selectListCollectionView.listDelegate = self
         taskTableView.taskDelegate = self
         sections = [Section]()
         
-        Section.createSectionWithDoneTasks()
+        _ = Section.createSectionWithDoneTasks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,8 +77,8 @@ class TaskViewerViewController: UIViewController {
         page.actionHandler = { item in
             let center = UNUserNotificationCenter.current()
             center.requestAuthorization(options: [.alert, .sound]) { (granted, _) in
-                if !granted {
-                    self.askNotificationPermission()
+                DispatchQueue.main.async {
+                    self.bulletinManager?.dismissBulletin()
                 }
             }
         }

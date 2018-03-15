@@ -49,7 +49,7 @@ class AddTaskViewController: UIViewController {
     }
     
     @objc func doneButtonClicked(_ sender: Any) {
-        newTask()
+        _ = newTask()
         hide()
     }
     

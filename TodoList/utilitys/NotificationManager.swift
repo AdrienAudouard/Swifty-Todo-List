@@ -38,6 +38,7 @@ class NotificationManager {
     
     func removeNotification(_ task: Task) {
         center.removePendingNotificationRequests(withIdentifiers: ["\(task.id)"])
+        
     }
     
     func notHavePermission(_ handler: @escaping () -> Void) {
