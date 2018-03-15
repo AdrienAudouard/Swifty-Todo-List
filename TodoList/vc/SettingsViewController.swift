@@ -119,11 +119,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func notificationPushSwitchValueChanged(_ sender: UISwitch) {
-        if sender.isOn {
-            
-        } else {
-            
-        }
+        alert(title: "Error", message: "Not yet implemented", button: "Ok")
+        sender.isOn = !sender.isOn
     }
+    
+    @IBAction func nightModeSwitchValueChanged(_ sender: UISwitch) {
+        alert(title: "Error", message: "Not yet implemented", button: "Ok")
+        sender.isOn = !sender.isOn
+    }
+    
+    
 
 }
