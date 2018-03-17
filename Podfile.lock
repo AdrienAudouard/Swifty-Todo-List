@@ -1,8 +1,12 @@
 PODS:
   - BulletinBoard (1.3.0)
   - DateTimePicker (1.2)
+  - Differentiator (3.0.2)
   - FSCalendar (2.7.9)
   - IQKeyboardManagerSwift (5.0.6)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - RAMAnimatedTabBarController (3.0.4)
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
@@ -12,8 +16,16 @@ PODS:
   - RidazSwiftyFramework (0.0.2)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
   - Spring (1.0.5)
+  - XCGLogger (6.0.2):
+    - XCGLogger/Core (= 6.0.2)
+  - XCGLogger/Core (6.0.2):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - BulletinBoard
@@ -24,8 +36,10 @@ DEPENDENCIES:
   - RealmSwift
   - RidazSwiftyFramework (from `https://github.com/RidazFluent/RidazSwiftyFramework.git`, tag `0.0.2`)
   - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - XCGLogger (~> 6.0.2)
 
 EXTERNAL SOURCES:
   RidazSwiftyFramework:
@@ -45,16 +59,20 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   BulletinBoard: 23c9d98cac654fd484d76f2a0655669974e9bd9c
   DateTimePicker: d3833535f731663cab99705326765a5ef18f66cc
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   RidazSwiftyFramework: 20d4efc39264b3556d63c91bfe40ef93e5db501e
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
+  XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 012735e61c7bf8ebad45506b40af43c46087dffa
+PODFILE CHECKSUM: 65f82862602227268ed6376dccb2350969ccef7b
 
 COCOAPODS: 1.4.0.beta.2

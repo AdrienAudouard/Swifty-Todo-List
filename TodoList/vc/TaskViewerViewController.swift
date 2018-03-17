@@ -12,19 +12,15 @@ import IQKeyboardManagerSwift
 import Spring
 import BulletinBoard
 import UserNotifications
+import RxSwift
 
 class TaskViewerViewController: UIViewController {
     
     var bulletinManager: BulletinManager?
+    var viewModel: TasksViewerViewModel = TasksViewerViewModel()
+    var taskDataSource: RxTasksViewerDataSource!
+    var disposeBag = DisposeBag()
     
-    var sections: [Section]! {
-        didSet {
-            UIView.transition(with: taskTableView, duration: 0.2,options: .transitionCrossDissolve, animations: {
-                self.taskTableView.sections = self.sections
-                
-            })
-        }
-    }
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var taskTableView: TacheTableView!
@@ -33,13 +29,13 @@ class TaskViewerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let chooseThemePopUp = ChooseThemePopUp(frame: self.view.bounds)
-        
         selectListCollectionView.listDelegate = self
-        taskTableView.taskDelegate = self
-        sections = [Section]()
         
-        _ = Section.createSectionWithDoneTasks()
+        taskDataSource = RxTasksViewerDataSource(taskTableView.taskClicked)
+        
+        self.populateTableView()
+
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,18 +48,33 @@ class TaskViewerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //applyTheme()
-        reloadData()
+        //reloadData()
     }
     
-    func applyTheme() {
-        let t = AppPreferences.sharedInstance.theme!
+    func populateTableView() {
+        let observable = viewModel.sections.asObservable()
         
-        self.bgView.backgroundColor = t.backgroundColor
-        self.tabBarController?.tabBar.barTintColor = t.navBarBackgroundColor
-        self.tabBarController?.tabBar.tintColor = t.navBarItemColor
+        observable.bind(to: taskTableView.rx.items(dataSource: taskDataSource)).disposed(by: disposeBag)
         
-        self.taskTableView.applyTheme()
+        // When the user delete a task
+        taskTableView.taskDeleted.subscribe { (indexPathEvent) in
+            UIView.transition(with: self.taskTableView, duration: 0.2,options: .transitionCrossDissolve, animations: {
+                self.viewModel.delete(indexPath: indexPathEvent.element!)
+            })
+            
+        }.disposed(by: disposeBag)
+        
+        taskTableView.taskClicked.subscribe(makeTaskDone(_:)).disposed(by: disposeBag)
+    }
+    
+    func makeTaskDone(_ taskEvent: Event<Task>) {
+        log.info("Task \(taskEvent.element!.taskName) deleted")
+        
+        taskEvent.element?.done = true
+        UIView.transition(with: taskTableView, duration: 0.2,options: .transitionCrossDissolve, animations: {
+            self.viewModel.removeFromCurrentData(task: taskEvent.element!)
+            self.taskTableView.reloadData()
+        })
     }
     
     func askNotificationPermission() {
@@ -99,37 +110,25 @@ class TaskViewerViewController: UIViewController {
         performSegue(withIdentifier: "InitListViewController", sender: nil)
     }
     func reloadData() {
-        self.taskTableView.sections = Section.createSections()
-    }
-}
-
-extension TaskViewerViewController: TaskProtocol {
-    func mustRemoveTask(task: Task) {
-        TaskManager.remove(task)
-        reloadData()
-    }
-    
-    func newTaskCreated(task newTask: Task) {
-        TaskManager.save(newTask)
-        reloadData()
+        self.taskTableView.sections = SectionManager.createSections()
     }
 }
 
 extension TaskViewerViewController: FilterListDelegate {
     func printAllTask() {
-        sections = Section.createSections()
+        //sections = SectionManager.createSections()
     }
     
     func removeAll() {
-        sections = Section.createEmptySections()
+        //sections = SectionManager.createEmptySections()
     }
     
     func addFilter(list: List) {
-        sections = Section.merge(s1: sections, s2: Section.createSectionWith(filter: list))
+        //sections = SectionManager.merge(s1: sections, s2: SectionManager.createSectionWith(filter: list))
     }
     
     func removeFilter(list: List) {
-        sections = Section.remove(filter: list, sections: sections)
+        //sections = SectionManager.remove(filter: list, sections: sections)
     }
     
     

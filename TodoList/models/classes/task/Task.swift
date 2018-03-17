@@ -9,14 +9,24 @@
 import Foundation
 import Realm
 import RealmSwift
-
+import RxSwift
+import RxDataSources
 
 
 /// A Task represent a action the user must do
 /// It's represented by a uniquement ID used to save it in local,
 /// a name, a dead line and boolean showing if the task is done or not
 
-class Task: Object {
+class Task: Object, IdentifiableType {
+    typealias Identity = Int
+    
+    var identity: Identity {
+        if isInvalidated {
+            return 0
+        }
+        return _id
+    }
+    
     @objc dynamic private var _id: Int = 0
     @objc dynamic private var _taskName: String = ""
     @objc dynamic private var _date: Date = Date()

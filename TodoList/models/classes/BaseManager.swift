@@ -9,9 +9,9 @@
 import Foundation
 import RealmSwift
 import Realm
+import RxSwift
 
-class BaseManager<T: Object> {
-    
+class BaseManager<T: Object> {    
     /// Return the next id available for a new T  object
     ///
     /// - Returns: new ID
@@ -36,6 +36,10 @@ class BaseManager<T: Object> {
     ///
     /// - Parameter object: Object to delete
     class func remove(_ object: T) {
+        guard !object.isInvalidated else {
+            return
+        }
+        
         let realm = try! Realm()
         
         try! realm.safeWrite {

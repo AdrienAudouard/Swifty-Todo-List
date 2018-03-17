@@ -18,7 +18,7 @@ class DoneTasksViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        taskTableView.sections = Section.createSectionWithDoneTasks()
+        taskTableView.sections = SectionManager.createSectionWithDoneTasks()
     }
 }
 

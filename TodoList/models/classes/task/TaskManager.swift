@@ -9,12 +9,22 @@
 import Foundation
 import Realm
 import RealmSwift
-
+import RxSwift
 
 
 /// The task manager is used to save, delete and get task from the databse
 
 class TaskManager: BaseManager<Task> {
+    static var newTask = PublishSubject<Task>()
+    
+    class func create(_ name: String, date: Date, list: List) -> Task{
+        let task = Task.init(name, date: date, list: list)
+        
+        newTask.onNext(task)
+        
+        return task
+    }
+    
     /// Return all the tasks for a specific date
     ///
     /// - Parameter date: Date we search

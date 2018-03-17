@@ -12,8 +12,13 @@ target 'TodoList' do
   pod 'BulletinBoard'
   pod 'RAMAnimatedTabBarController'
   pod 'FSCalendar', '~> 2.7'
+  
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+  
+  pod 'XCGLogger', '~> 6.0.2'
+
   # Pods for TodoList
 
 end

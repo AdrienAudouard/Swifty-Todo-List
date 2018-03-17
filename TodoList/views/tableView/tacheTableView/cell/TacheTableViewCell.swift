@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class TacheTableViewCell: CustomTableViewCell {
 
@@ -16,6 +17,7 @@ class TacheTableViewCell: CustomTableViewCell {
     @IBOutlet weak var bgView: UIView!
     
     weak var delegate: TaskDoneDelegate?
+    weak var taskClickedPublishSubject: PublishSubject<Task>!
     
     var taskModel: TaskCellModel? {
         didSet {
@@ -30,11 +32,6 @@ class TacheTableViewCell: CustomTableViewCell {
         
         roundedBackgroundView.layer.cornerRadius = 8
         roundedBackgroundView.layer.masksToBounds = true
-        
-        //bgView.layer.cornerRadius = 8
-        //bgView.layer.masksToBounds = true
-        
-        //applyTheme()
         
         self.height = 110
     }
@@ -59,15 +56,11 @@ class TacheTableViewCell: CustomTableViewCell {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        delegate?.done(task: taskModel!.task, cell: self)
+        taskClickedPublishSubject.onNext(taskModel!.task)
     }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-    }
-    
-    func didTap() {
-        self.height = 120
     }
 
 }

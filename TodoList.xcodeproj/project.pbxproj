@@ -40,6 +40,9 @@
 		7A65DEFA2052F1030066B424 /* TouchIdPopUP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A65DEF92052F1030066B424 /* TouchIdPopUP.xib */; };
 		7A65DEFC2052F2B40066B424 /* TouchIdPopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEFB2052F2B40066B424 /* TouchIdPopUP.swift */; };
 		7A65DEFE205300D30066B424 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65DEFD205300D30066B424 /* UIViewController.swift */; };
+		7A6D0A07205ABE28001B35AF /* SectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0A06205ABE28001B35AF /* SectionManager.swift */; };
+		7A765F7C205AB6A3006993A1 /* TasksViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765F7B205AB6A3006993A1 /* TasksViewerViewModel.swift */; };
+		7A765F7F205ABBFD006993A1 /* RxTasksViewerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765F7E205ABBFD006993A1 /* RxTasksViewerDataSource.swift */; };
 		7A882EA1205334570047BA74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A882EA0205334570047BA74 /* SettingsViewController.swift */; };
 		7A8D2BAC204C5B930085824C /* TaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D2BAB204C5B930085824C /* TaskProtocol.swift */; };
 		7A8D2BB0204CB5850085824C /* ChooseThemePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8D2BAF204CB5850085824C /* ChooseThemePopUp.xib */; };
@@ -104,6 +107,9 @@
 		7A65DEF92052F1030066B424 /* TouchIdPopUP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchIdPopUP.xib; sourceTree = "<group>"; };
 		7A65DEFB2052F2B40066B424 /* TouchIdPopUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIdPopUP.swift; sourceTree = "<group>"; };
 		7A65DEFD205300D30066B424 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7A6D0A06205ABE28001B35AF /* SectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionManager.swift; sourceTree = "<group>"; };
+		7A765F7B205AB6A3006993A1 /* TasksViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewerViewModel.swift; sourceTree = "<group>"; };
+		7A765F7E205ABBFD006993A1 /* RxTasksViewerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTasksViewerDataSource.swift; sourceTree = "<group>"; };
 		7A882EA0205334570047BA74 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7A8D2BAB204C5B930085824C /* TaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProtocol.swift; sourceTree = "<group>"; };
 		7A8D2BAF204CB5850085824C /* ChooseThemePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseThemePopUp.xib; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 		7A55526A2046E7A500BA646E /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				7A765F7A205AB5CA006993A1 /* viewModels */,
 				7A2A0490204C2E1900240822 /* extensions */,
 				7A2A048B204C1DFE00240822 /* utilitys */,
 				7A2A048A204C1DEB00240822 /* views */,
@@ -318,6 +325,31 @@
 				7A5552772046E7A500BA646E /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		7A6D0A08205AC577001B35AF /* sections */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A048C204C2B1000240822 /* Section.swift */,
+				7A6D0A06205ABE28001B35AF /* SectionManager.swift */,
+			);
+			path = sections;
+			sourceTree = "<group>";
+		};
+		7A765F7A205AB5CA006993A1 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A765F7B205AB6A3006993A1 /* TasksViewerViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		7A765F7D205ABBE5006993A1 /* dateSources */ = {
+			isa = PBXGroup;
+			children = (
+				7A765F7E205ABBFD006993A1 /* RxTasksViewerDataSource.swift */,
+			);
+			path = dateSources;
 			sourceTree = "<group>";
 		};
 		7A8D2BA9204C5B660085824C /* protocols */ = {
@@ -334,9 +366,10 @@
 		7A8D2BAA204C5B6E0085824C /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A6D0A08205AC577001B35AF /* sections */,
+				7A765F7D205ABBE5006993A1 /* dateSources */,
 				7A4BFDAC20567DE200F930FD /* task */,
 				7A4BFDAB20567DD700F930FD /* list */,
-				7A2A048C204C2B1000240822 /* Section.swift */,
 				7A2A0493204C3AEB00240822 /* TaskCellModel.swift */,
 				7A8D2BB3204CBF490085824C /* Theme.swift */,
 				7A2CFD14205687E60009FBFC /* BaseManager.swift */,
@@ -516,29 +549,37 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RidazSwiftyFramework/RidazSwiftyFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidazSwiftyFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,8 +618,10 @@
 				7A882EA1205334570047BA74 /* SettingsViewController.swift in Sources */,
 				7A2A0496204C539A00240822 /* NotificationManager.swift in Sources */,
 				7A8D2BB4204CBF490085824C /* Theme.swift in Sources */,
+				7A6D0A07205ABE28001B35AF /* SectionManager.swift in Sources */,
 				7A55526E2046E7A500BA646E /* TaskViewerViewController.swift in Sources */,
 				7A98F39A205346C000AEBB5F /* DateTaskTableViewCell.swift in Sources */,
+				7A765F7C205AB6A3006993A1 /* TasksViewerViewModel.swift in Sources */,
 				7A2854E1204D919000690F20 /* ThemeChangeProtocol.swift in Sources */,
 				7AC5ACB1204714BA004C4F4E /* DayTableViewCell.swift in Sources */,
 				7A8D2BAC204C5B930085824C /* TaskProtocol.swift in Sources */,
@@ -609,6 +652,7 @@
 				7A8D2BB2204CB5F60085824C /* ChooseThemePopUp.swift in Sources */,
 				7A98F39C205346E900AEBB5F /* DateTaskTableView.swift in Sources */,
 				7A2CFD1820568EBC0009FBFC /* SelectListCollectionView.swift in Sources */,
+				7A765F7F205ABBFD006993A1 /* RxTasksViewerDataSource.swift in Sources */,
 				7A65DEEC2052C2410066B424 /* CustomItemRamAnimation.swift in Sources */,
 				7A2A0492204C384900240822 /* String.swift in Sources */,
 				7A50DBEC20484F72005B50D7 /* LoadingViewController.swift in Sources */,

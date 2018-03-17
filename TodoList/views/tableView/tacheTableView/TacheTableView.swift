@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import RxSwift
 
-class TacheTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+class TacheTableView: UITableView, UITableViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     var sections: [Section] {
         didSet {
-            self.reloadData()
+            //self.reloadData()
         }
     }
-    
-    weak var taskDelegate: TaskProtocol?
+        
+    var taskDeleted = PublishSubject<IndexPath>()
+    var taskClicked = PublishSubject<Task>()
     
     required init?(coder aDecoder: NSCoder) {
         self.sections = [Section]()
@@ -26,7 +28,6 @@ class TacheTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         super.init(coder: aDecoder)
         
         self.delegate = self
-        self.dataSource = self
         
         var f = CGRect.zero
         f.size.height = .leastNormalMagnitude
@@ -34,54 +35,39 @@ class TacheTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         self.tableFooterView = UIView(frame: f)
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].cell.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let c = tableView.dequeueReusableCell(withIdentifier: "TacheTableViewCell") as! TacheTableViewCell
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
         
-        c.taskModel = TaskCellModel(sections[indexPath.section].cell[indexPath.row])
-        c.delegate = self
-        c.selectionStyle = .none
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(hex: "2C3E50")
+        header.textLabel?.font = UIFont.init(name: "HelveticaNeue-Bold", size: 19)
         
-        return c
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let header = tableView.dequeueReusableCell(withIdentifier: "DayTableViewCell") as! DayTableViewCell
-        header.tag = 1811
-        header.update(sections[section].title)
-        
-        let view = UIView(frame: header.bounds)
-        view.addSubview(header)
-        
-        return view
+        let bgView = UIView(frame: view.frame)
+        bgView.backgroundColor = UIColor(hex: "ECF0F1")
+        header.backgroundView = bgView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (tableView.dequeueReusableCell(withIdentifier: "TacheTableViewCell") as! TacheTableViewCell).height
+        return 110
     }
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return  (tableView.dequeueReusableCell(withIdentifier: "DayTableViewCell") as! DayTableViewCell).height
+        return  60
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let t = self.sections[indexPath.section].cell.remove(at: indexPath.row)
-                        
-            self.taskDelegate?.mustRemoveTask(task: t)
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction.init(style: .normal, title: "Delete") { (_, _) in
+            self.taskDeleted.onNext(indexPath)
         }
+        
+        deleteAction.backgroundColor = UIColor(hex: "#e74c3c")
+        
+        return [deleteAction]
     }
     
     func applyTheme() {
@@ -94,19 +80,4 @@ class TacheTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         
         self.reloadData()
     }
-}
-
-extension TacheTableView: TaskDoneDelegate {
-    func done(task: Task, cell: UITableViewCell) {
-        task.done = true
-        
-        let indexPath = self.indexPath(for: cell)!
-        
-        DispatchQueue.main.async {
-            self.sections[indexPath.section].cell.remove(at: indexPath.row)
-            self.deleteRows(at: [indexPath], with: .automatic)
-        }        
-    }
-    
-    
 }
